@@ -13,7 +13,7 @@
 | sincedate | 1900-01-01 (default) |
 
 ### Headers ###
-An authentication header with an access token is required. To retrieve a token, post your credentials to this URL:
+An `authorization` header with an access token is required. To retrieve a token, post your credentials to this URL:
 
 `[website_url]/Sitefinity/Authenticate/SWT` 
 
@@ -33,7 +33,7 @@ See [How to get the headers in C#](https://gist.github.com/jmotes/0225ae77e498ca
 curl --request POST \
   --url https://mazergroup.azurewebsites.net/Sitefinity/Authenticate/SWT \
   --header 'content-type: application/x-www-form-urlencoded' \
-  --data 'wrap_name=username&wrap_password=******'
+  --data 'wrap_name=username&wrap_password=******'authentication 
 ```
 
 **Example SWT response:**
