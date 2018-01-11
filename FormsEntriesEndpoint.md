@@ -2,7 +2,7 @@
 
 *URL:* `[websitedomain]/webapi/formentries/get`
 
-**HTTP Method:** POST
+**HTTP Method:** GET
 
 ### Query Parameters ###
 | Name | Example Value |
