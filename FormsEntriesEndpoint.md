@@ -4,7 +4,7 @@
 
 *URL:* `[websitedomain]/webapi/formentries/get`
 
-*HTTP Method:* POST
+**HTTP Method:** POST
 
 ### Query Parameters ###
 | Name | Example Value |
@@ -17,8 +17,9 @@
 ### Headers ###
 An authentication header with an access token is required. To retrieve a token, post your credentials to this URL:
 
-`[website_url]/Sitefinity/Authenticate/SWT`
-*Use these POST parameters:*
+`[website_url]/Sitefinity/Authenticate/SWT` 
+
+**Use these POST parameters:**
 
 | Name | Value |
 | --- | --- |
@@ -37,15 +38,15 @@ curl --request POST \
   --data 'wrap_name=jmotes&wrap_password=******'
 ```
 
-**Example SWT response**
+**Example SWT response:**
 
-NOTE: you only need the `wrap_access_token` portion of the response.
+NOTE: you only need the `wrap_access_token` portion of the response. The C# example (link above) shows how to parse it out.
 
 ```
 wrap_access_token=http%253a%252f%252fschemas.sitefinity.com%252fws%252f2011%252f06%252fidentity%252fclaims%252fuserid%3da61b857d-c805-6c22-9b58-ff00003d765f%26http%253a%252f%252fschemas.xmlsoap.org%252fws%252f2005%252f05%252fidentity%252fclaims%252fname%3djmotes%26http%253a%252f%252fschemas.sitefinity.com%252fws%252f2011%252f06%252fidentity%252fclaims%252frole%3d71dd8061-7e63-4b8c-9cd6-95d1bcb62726%253bEveryone%253bXmlConfigProvider%26http%253a%252f%252fschemas.sitefinity.com%252fws%252f2011%252f06%252fidentity%252fclaims%252frole%3d8efc7a02-3a17-4cc7-8bea-8efd1c8b0850%253bAuthenticated%253bXmlConfigProvider%26http%253a%252f%252fschemas.sitefinity.com%252fws%252f2011%252f06%252fidentity%252fclaims%252frole%3d8386039c-311e-4e50-8868-a7aa0ae5e3b9%253bBackendUsers%253bAppRoles%26http%253a%252f%252fschemas.sitefinity.com%252fws%252f2011%252f06%252fidentity%252fclaims%252frole%3ddc59cdd1-0d2f-410f-be0f-e51c1ad98d0c%253bAdministrators%253bAppRoles%26http%253a%252f%252fschemas.sitefinity.com%252fws%252f2011%252f06%252fidentity%252fclaims%252flastlogindate%3d2018-01-11%2b16%253a25%253a33Z%26http%253a%252f%252fschemas.sitefinity.com%252fws%252f2011%252f06%252fidentity%252fclaims%252fdomain%3dDefault%26TokenId%3db5fa0796-dd5d-40e0-99b7-8cac36f8eb4e%26Issuer%3dhttp%253a%252f%252flocalhost%253a60876%252fSitefinity%252fAuthenticate%252fSWT%26Audience%3dhttp%253a%252f%252flocalhost%253a60876%26ExpiresOn%3d1515691533%26HMACSHA256%3dofejCnqTaWXXXQrEgV6pNXw0%252fDxQK8TUcB7zoBSKxgk%253d&wrap_access_token_expires_in=3600
 ```
 
-**Getting the form entries**
+**Getting the form entries:**
 ```
 curl --request GET \
   --url 'https://mazergroup.azurewebsites.net/webapi/formentries/get?formname=sf_contactus&page=2&resultsperpage=3&sincedate=2017-03-11' \
@@ -61,23 +62,23 @@ curl --request GET \
 		"EntryFields": [
 			{
 				"Title": "First Name",
-				"Value": "Derrick"
+				"Value": "John"
 			},
 			{
 				"Title": "Last Name",
-				"Value": "Koon"
+				"Value": "Smith"
 			},
 			{
 				"Title": "Email Address",
-				"Value": "dakoon@ualr.edu"
+				"Value": "test@teamsi.com"
 			},
 			{
 				"Title": "Phone Number",
-				"Value": "5012911222"
+				"Value": "5015555555"
 			},
 			{
 				"Title": "Message",
-				"Value": "TEst Message"
+				"Value": "test Message"
 			}
 		]
 	},
@@ -86,23 +87,23 @@ curl --request GET \
 		"EntryFields": [
 			{
 				"Title": "First Name",
-				"Value": "Derrick"
+				"Value": "Jane"
 			},
 			{
 				"Title": "Last Name",
-				"Value": "Koon"
+				"Value": "Doe"
 			},
 			{
 				"Title": "Email Address",
-				"Value": "dakoon@ualr.edu"
+				"Value": "test@teamsi.com"
 			},
 			{
 				"Title": "Phone Number",
-				"Value": "5012911222"
+				"Value": "5015555555"
 			},
 			{
 				"Title": "Message",
-				"Value": ""
+				"Value": "Testing message box"
 			}
 		]
 	}
