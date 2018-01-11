@@ -33,7 +33,7 @@ See [How to get the headers in C#](https://gist.github.com/jmotes/0225ae77e498ca
 curl --request POST \
   --url https://mazergroup.azurewebsites.net/Sitefinity/Authenticate/SWT \
   --header 'content-type: application/x-www-form-urlencoded' \
-  --data 'wrap_name=username&wrap_password=******'authentication 
+  --data 'wrap_name=username&wrap_password=******' 
 ```
 
 **Example SWT response:**
