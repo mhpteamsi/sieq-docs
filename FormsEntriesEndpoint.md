@@ -22,7 +22,7 @@ An authentication header with an access token is required. To retrieve a token, 
 | Name | Value |
 | --- | --- |
 | wrap_name | username |
-| wrap_password | 8asdfasdfa |
+| wrap_password | ********** |
 
 See [How to get the headers in C#](https://gist.github.com/jmotes/0225ae77e498cabfb8986afdf3a811ff)
 
