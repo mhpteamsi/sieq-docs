@@ -1,6 +1,4 @@
-# SIEQ
-
-## Form Entries Endpoint
+# SIEQ Form Entries Endpoint
 
 *URL:* `[websitedomain]/webapi/formentries/get`
 
